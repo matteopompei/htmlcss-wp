@@ -1,3 +1,5 @@
+/* DICHIARAZIONI BASE */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@
 body {
     background-color: #FFF;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 .container {
@@ -14,9 +17,11 @@ body {
     margin: auto;
 }
 
-.container > header, .container > nav, .container, .container > section {
+.container > header, .container > nav, .container, .container section {
     margin-bottom: 30px;
 }
+
+/* HEADER */
 
 .container > header > #logo {
     height: 70px;
@@ -24,13 +29,14 @@ body {
     padding-right: 20px;
 }
 
+/* MENÙ */
 .container > nav > ul {
     list-style-type: none;
 }
 
 .container > nav > ul > li {
     display: inline;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     color: #9f9f9f;
     margin-right: 10px;
@@ -48,23 +54,31 @@ body {
     border-bottom: 3px solid #616161;
 }
 
-.container section:first-child, .overlay {
+/* PRIMA SEZIONE */
+
+#banner, .overlay {
     height: 500px;
     border-radius: 10px;
 }
 
-.container section:first-child {
+#banner {
     background-image: url(../img/banner.jpg);
     background-position: center;
     background-size: cover;
 }
 
-.overlay {
+#banner .overlay {
     background-color: rgba(0, 0, 0, 0.3);
+    transition: 1s;
     position: relative;
+    cursor: pointer;
 }
 
-.overlay div {
+#banner .overlay:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#banner .overlay div {
     position: absolute;
     width: 60%;
     bottom: 70px;
@@ -72,11 +86,103 @@ body {
     color: #FFF;
 }
 
-.overlay h2 {
+#banner .overlay h2 {
     font-weight: normal;
-    font-size: 32px;
+    font-size: 2em;
 }
 
-.overlay p {
+/* SECONDA SEZIONE */
+
+#colonne::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* Header */
+
+#colonne header {
+    margin-bottom: 30px;
+}
+
+#colonne header h1 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #000;
+}
+
+#colonne header h4 {
     font-size: 14px;
+    font-weight: normal;
+    color: #616161;
+}
+
+/* Colonne */
+
+#colonne div h6 {
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#colonne div p {
+    color: #616161;
+}
+
+#col1, #col2 {
+    float: left;
+}
+
+#col3 {
+    float: right;
+}
+
+#col1, #col3 {
+    width: 20%;
+}
+
+#col2 {
+    width: 56%;
+    margin: 0 2%;
+}
+
+#col1 div, #col2 div, #col3 div {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#col1 div {
+    background-image: url(../img/img-1.jpg);
+}
+
+/* 
+#col2 div {
+    background-image: url(../img/banner-2.jpg);
+}
+
+#col3 div {
+    background-image: url(../img/img-2.jpg);
+} */
+
+#colonne .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    height: 200px;
+    z-index: 9999;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+
+footer p::after {
+    content: ' \2665';
+    font-size: 2em;
+    color: #F00;
+    font-weight: bold;
 }
