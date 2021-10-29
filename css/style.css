@@ -68,7 +68,7 @@ body {
 }
 
 #banner .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     transition: 1s;
     position: relative;
     cursor: pointer;
@@ -76,6 +76,7 @@ body {
 
 #banner .overlay:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 5px #CCC;
 }
 
 #banner .overlay div {
@@ -112,7 +113,7 @@ body {
 }
 
 #colonne header h4 {
-    font-size: 14px;
+    font-size: 1em;
     font-weight: normal;
     color: #616161;
 }
@@ -120,7 +121,7 @@ body {
 /* Colonne */
 
 #colonne div h6 {
-    font-size: 14px;
+    font-size: 1em;
     color: #000;
     font-weight: normal;
     margin-bottom: 10px;
@@ -155,24 +156,21 @@ body {
     margin-bottom: 15px;
 }
 
-#col1 div {
+#col1 > div {
     background-image: url(../img/img-1.jpg);
 }
 
-/* 
-#col2 div {
+#col2 > div {
     background-image: url(../img/banner-2.jpg);
 }
 
-#col3 div {
+#col3 > div {
     background-image: url(../img/img-2.jpg);
-} */
+}
 
 #colonne .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    height: 200px;
-    z-index: 9999;
 }
 
 /* FOOTER */
