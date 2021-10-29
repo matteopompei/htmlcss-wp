@@ -14,7 +14,7 @@ body {
     margin: auto;
 }
 
-.container > header, .container > nav {
+.container > header, .container > nav, .container, .container > section {
     margin-bottom: 30px;
 }
 
@@ -39,11 +39,44 @@ body {
 .container > nav > ul > li a {
     text-decoration: none;
     color: inherit;
-
-    transition: 1s;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    transition: 0.5s;
 }
 
 .container > nav > ul > li a:hover {
     color: #616161;
     border-bottom: 3px solid #616161;
+}
+
+.container section:first-child, .overlay {
+    height: 500px;
+    border-radius: 10px;
+}
+
+.container section:first-child {
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.overlay div {
+    position: absolute;
+    width: 60%;
+    bottom: 70px;
+    left: 50px;
+    color: #FFF;
+}
+
+.overlay h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.overlay p {
+    font-size: 14px;
 }
